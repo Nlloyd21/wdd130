@@ -178,7 +178,102 @@ nav {
     grid-row: 5/8;
     box-shadow: 5px 5px 10px black;
 }
+#subpage-background {
+    background-color:whitesmoke;
+}
+#rivers {
+    text-align: center;
+    font-family: 'Gideon Roman', sans-serif;
+    font-size: 1.5em;
+}
+.subpage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 5em;
+}
+.salmon-river {
+    background-color: wheat;
+    margin-right: 35px;
+    line-height: 1.3em;
+    box-shadow: -10px 5px 10px black ;
+    border-radius: 15px;
+}
+.salmon-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 15px;
+}
+.salmon-river h2, p {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 0px 20px 0px 20px;
+}
+.salmon-river h2 {
+    font-family: 'Short Stack', sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.salmon-river p {
+    font-size: .8em;
+    font-family: 'Dosis', sans-serif, Georgia;
+}
+.deso-river {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-radius: 15px;
+    box-shadow: -10px 5px 10px black;
+    border-radius: 15px;
 
+}
+.desolation-river {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: wheat;
+    margin-left: 35px;
+    line-height: 1.3em;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 15px;
+}
+.desolation-river p {
+    font-size: .8em;
+    font-family: 'Dosis', sans-serif, Georgia;
+}
+.desolation-river h2 {
+    font-size: 1.3em;
+    font-family: 'Short Stack', sans-serif;
+}
+.grand-canyon-img {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 75%;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 15px;
+}
+.grand-canyon {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    line-height: 1.3em;
+    background-color: wheat;
+    margin-right: 35px;
+    box-shadow: -10px 5px 10px black;
+    border-radius: 15px;
+}
+.grand-canyon h2 {
+    font-size: 1.3em;
+    font-family: 'Short Stack', sans-serif;
+}
+.grand-canyon p {
+    font-size: .8em;
+    font-family: 'Dosis', sans-serif, Georgia;
+}
+
+
+
+
+/* Do not put anything under query */
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
