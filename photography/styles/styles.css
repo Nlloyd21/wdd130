@@ -11,6 +11,9 @@ nav a {
     font-size: 1.5em;
     color: black
 }
+.logo {
+    width: 100%;
+}
 nav a:hover {
     background-color: grey;
     color: white;
@@ -147,6 +150,13 @@ img {vertical-align: middle;}
     width: 100%;
     text-align: center;
 }
+.slideshow h1 {
+    text-align: center;
+    font-family: 'Patrick Hand', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    margin-bottom: 0;
+}
 .numbertext {
     color: white;
     background-color: black;
@@ -181,4 +191,84 @@ img {vertical-align: middle;}
 @keyframes fade {
     from {opacity: .4;}
     to {opacity: 1;}
+}
+#contact-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#message {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 1;
+    padding: 40px 0;
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Patrick Hand', sans-serif;
+    text-align: center;
+}
+.background {
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+.roadsign {
+    width: 100%;
+    filter: blur(2px);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border-radius: 1em;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    font-family: 'Bitter Family', sans-serif;
+    box-shadow: 5px 5px 5px 10px;
+    
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+input, textarea {
+    font: 1em;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+input:focus, textarea:focus {
+    border-color: black;
+}
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+.button {
+    padding-left: 90px;
+}
+#feedback {
+    background-color: #4EA5D9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    display: none;
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 20px;  
+    text-align: center;
+}
+.moveDown {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

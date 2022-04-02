@@ -11,7 +11,7 @@
     <div id="content">
         <header>
             <a id="logo_link" href="index.html">
-                <img class="logo" src="images/My project.png" width="100px">
+                <img class="logo" src="images/my-project.png" alt="logo">
             </a>
             <nav>
                 <a href="index.html">Home</a>
@@ -19,10 +19,13 @@
                 <a href="contact.html">Contact Me</a>
             </nav>
         </header>
-        <main>
+        <main id="contact-page">
             <div class="background">
-                <img src="images/roadsign.jpg" style="width: 50%">
+                <img class="roadsign" src="images/roadsign.jpg" alt="logo">
             </div>
+            <section id="message">
+                <h1>Contact Me</h1>
+            </section>
             <div id="feedback"></div>
             <form action="/my-handling-form-page" method="post">
                 <ul>
@@ -36,7 +39,7 @@
                         placeholder="your email" required>
                       </li>
                     <li>
-                        <label for="service">What service would you like?</label>
+                        <label for="service">Service</label>
                         <select id="service" name="service">
                             <option value="photoshoot">Photoshoot</option>
                             <option value="edit">Edit Photos</option>
@@ -56,7 +59,7 @@
                         </select>
                     </li>
                     <li>
-                      <label for="msg">Questions or anything I need to know:</label>
+                      <label for="msg">Questions:</label>
                       <textarea id="msg" name="user_message"></textarea>
                     </li>
                     <li class="button">
@@ -66,9 +69,9 @@
             </form>
         </main>
         <footer>
-            <h3>Lloyd Photograpgy &copy Noah Lloyd</h3>
-            <h3 href="site-plan.html">Site Plan</h3>
-            <h3 href="contact.html">Contact Me</h3>
+            <h3>Lloyd Photography &copy; Noah Lloyd</h3>
+            <h3><a href="site-plan.html">Site Plan</a></h3>
+            <h3><a href="contact.html">Contact Me</a></h3>
             <div class="social">
                 <a href="https://www.instagram.com/noah.lloyd.photography/" target="blank">
                     <img src="images/instagram.png" alt="instagram logo">
@@ -78,7 +81,23 @@
                 </a>
             </div>
         </footer>
-        </main>
+        <script>
+            // get the feedback div element so we can do something with it.
+            const feedbackElement = document.getElementById('feedback');
+            // get the form so we can read what was entered in it.
+            const formElement = document.forms[0];
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! I will get back with you as soon as possible!';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+        </script>
     </div>
 </body>
 </html>
